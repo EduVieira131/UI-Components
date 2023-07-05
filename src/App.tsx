@@ -1,11 +1,12 @@
-import { Plus } from '@phosphor-icons/react'
+import { CloudArrowUp, Plus } from '@phosphor-icons/react'
 import photo from './assets/photo.png'
+import ToggleSwitch from './components/Switch.tsx'
 
 function App() {
   return (
     <>
-      <div className="h-screen bg-[#1B1D28] p-20">
-        <div className="flex h-[439px] w-[310px] flex-col gap-6 rounded-xl bg-[#222533] p-[30px] font-roboto">
+      <div className="flex h-screen gap-10 bg-[#1B1D28] p-20">
+        <div className="flex h-[439px] w-[310px] flex-col gap-6 rounded-xl bg-[#222533] p-8 font-roboto">
           <div className="flex items-center gap-4">
             <img src={photo} alt="Photo of a person" />
 
@@ -190,6 +191,86 @@ function App() {
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="h-[564px] w-[432px] rounded-xl bg-[#222533] p-10">
+          <h1 className="mb-6 text-2xl font-bold text-[#e5e5e5]">
+            Add Profile
+          </h1>
+
+          <div className="mb-9 flex items-center gap-6">
+            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[#1B1D28]">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_2_115)">
+                  <path
+                    d="M20 10.6667H20.0133"
+                    stroke="#7D8193"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M22.6667 5.33333H9.33334C7.1242 5.33333 5.33334 7.12419 5.33334 9.33333V22.6667C5.33334 24.8758 7.1242 26.6667 9.33334 26.6667H22.6667C24.8758 26.6667 26.6667 24.8758 26.6667 22.6667V9.33333C26.6667 7.12419 24.8758 5.33333 22.6667 5.33333Z"
+                    stroke="#7D8193"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M5.33334 20L10.6667 14.6667C11.2748 14.0815 11.9645 13.7735 12.6667 13.7735C13.3688 13.7735 14.0586 14.0815 14.6667 14.6667L21.3333 21.3333"
+                    stroke="#7D8193"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M18.6667 18.6667L20 17.3333C20.6081 16.7482 21.2978 16.4402 22 16.4402C22.7021 16.4402 23.3919 16.7482 24 17.3333L26.6667 20"
+                    stroke="#7D8193"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2_115">
+                    <rect width="32" height="32" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            <button className="flex items-center justify-center gap-1 rounded bg-[#1A1C29] px-9 py-4 font-roboto text-base text-[#e5e5e5] hover:bg-[#e5e5e5] hover:text-[#1A1C29]">
+              <CloudArrowUp />
+              Upload Image
+            </button>
+          </div>
+
+          <form className="flex flex-col gap-9">
+            <input
+              type="text"
+              placeholder="Profile name"
+              className="w-full rounded border-2 border-[#34394E] bg-[#1B1D28] px-8 py-6 font-roboto text-base text-[#7D8193]"
+            />
+
+            <div className="flex w-[308px] flex-col gap-5 text-white">
+              <ToggleSwitch />
+
+              <p>
+                A profile with curated content and features, and a simplified
+                user interface.
+              </p>
+            </div>
+
+            <button className="flex w-full justify-center rounded bg-violet-500 py-4 text-[#e5e5e5] hover:bg-violet-600">
+              Save
+            </button>
+          </form>
         </div>
       </div>
     </>
