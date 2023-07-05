@@ -1,11 +1,11 @@
-import { CloudArrowUp, Plus } from '@phosphor-icons/react'
+import { CloudArrowUp, Plus, X } from '@phosphor-icons/react'
 import photo from './assets/photo.png'
 import ToggleSwitch from './components/Switch.tsx'
 
 function App() {
   return (
     <>
-      <div className="flex h-screen gap-10 bg-[#1B1D28] p-20">
+      <div className="flex h-screen items-center justify-center gap-10 bg-[#1B1D28] p-20">
         <div className="flex h-[439px] w-[310px] flex-col gap-6 rounded-xl bg-[#222533] p-8 font-roboto">
           <div className="flex items-center gap-4">
             <img src={photo} alt="Photo of a person" />
@@ -271,6 +271,21 @@ function App() {
               Save
             </button>
           </form>
+        </div>
+
+        <div className="relative h-fit w-fit rounded-xl bg-[#222533] px-20 py-16">
+          <h1 className="mb-5 text-2xl font-bold text-white">
+            Sharing with family?
+          </h1>
+          <p className="text-lg text-white">
+            Add personal profiles for adults, teens or kids.
+          </p>
+
+          <button className="mt-10 flex w-[162px] justify-center rounded bg-violet-500 py-4 text-[#e5e5e5] hover:bg-violet-600">
+            Add profile
+          </button>
+
+          <X className="absolute right-8 top-8 h-4 w-4 fill-[#e5e5e5]" />
         </div>
       </div>
     </>
